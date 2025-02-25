@@ -1,0 +1,2 @@
+<!--components/my-com/my-com.wxml-->
+<text class="text-color">组件内容1</text>

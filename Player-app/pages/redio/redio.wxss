@@ -1,0 +1,23 @@
+
+.radio{
+  animation: rotate 8s linear infinite ;
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.paused{
+  animation-play-state:paused ;
+}
+
+.translateY{
+  transform: translateY(100%);
+}
+.nav{
+  transition: all .5s ease;
+}

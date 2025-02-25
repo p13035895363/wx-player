@@ -1,0 +1,4 @@
+/* components/my-com/my-com.wxss */
+.text-color{
+  color: blue;
+}

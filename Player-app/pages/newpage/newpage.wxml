@@ -1,0 +1,26 @@
+<!--pages/newpage/newpage.wxml-->
+<navigation-bar title="歌曲" back="true"></navigation-bar>
+<view style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 120px;background-color: #323232; box-shadow:#f2f2f2 inset 0 0 5px;">
+  <view style="color: #f2f2f2;font-size: 18px;">{{item.name}}</view>
+  <view style="color: #f2f2f2;font-size: 16px;margin-top: 5px;">{{item.name}}-{{item.author}}</view>
+</view>
+<view style="display: flex;justify-content: center; align-items: center; background-color: #545454; height: 420px;">
+  <view style="position: relative;" class="radio {{radioStateClass}}">
+    <image src="/images/images/radio.png" mode="aspectFill" style="position: absolute; width: 200px; height: 200px; top:50% ; left: 50%; transform: translate(-50%,-50%);"/>
+    <image src="/images/images歌曲图片/Christine Welch.jpg" mode="aspectFill" style="position: absolute; width: 120px; height: 120px; border-radius: 50%; top:50% ; left: 50%; transform: translate(-50%,-50%);"/>
+  </view>
+</view>
+<view style="height: 200px; background-color: #323232;">
+  <view style="display: flex; align-items: center; justify-content: center; padding-top: 10px;">
+    <view style="margin-right: 10px; color: #f2f2f2;">{{musicNowString}}</view>
+    <progress style="width: 50%;" percent="{{musicPercent}}"></progress>
+    <view style="margin-left: 10px; color: #f2f2f2;">{{musicString}}</view>
+  </view>
+  <view style="display: flex;justify-content: space-evenly; align-items: center; padding-top: 20px; height: 50px;">
+    <image src="/images/images/single.png" mode="aspectFill" style="height: 40px; width: 40px;"/>
+    <image src="/images/images/prev.png" mode="aspectFill" style="height: 50px; width: 50px;"/>
+    <image src="{{playImage}}" mode="aspectFill" style="height: 50px; width: 50px;" bindtap="playClick"/>
+    <image src="/images/images/next.png" mode="aspectFill" style="height: 50px; width: 50px;"/>
+    <image src="/images/images/share.png" mode="aspectFill" style="height: 40px; width: 40px;"/>
+  </view>
+</view>

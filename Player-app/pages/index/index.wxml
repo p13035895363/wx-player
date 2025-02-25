@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<navigation-bar title="歌单" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<swiper indicator-dots="{{indicatorDots}}" interval="{{interval}}" duration="{{duration}}" class="swiper" autoplay="{{autoplay}}">
+  <block wx:for="{{imageList}}" wx:key="*this">
+    <swiper-item class="swiper-item">
+      <image class="swiper-item-image" src="{{item.imageSrc}}" mode="aspectFill"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<scroll-view scroll-y="true" class="item-srcoll">
+  <view wx:for="{{itemList}}" wx:key="*this" class="item">
+    <view class="item-left"><image src="{{item.picUrl}}" mode="aspectFill" class="item-image"/></view>
+    <view class="item-center">
+      <view>{{item.albumname}}</view>
+      <view>{{item.artists}}</view>
+    </view>
+    <view class="item-right">
+      <image data-id="{{item.id}}" src="/images/images/play.png" bind:tap="clickPlay" mode="aspectFill" class="item-image"/>
+    </view>
+  </view>
+</scroll-view>
